@@ -5,7 +5,7 @@
 #include <iostream>
 #include <set>
 #include <sstream>
-#include "../dSFMT-src-2.2.3/dSFMT.h"
+#include "dSFMT.h"
 
 using namespace v8;
 using namespace node;
@@ -92,6 +92,7 @@ void init(Handle<Object> exports) {
   hook_error();
   NODE_SET_METHOD(exports, "v8version", j_version);
   NODE_SET_METHOD(exports, "create", j_create);
+  set_attribute(exports, "DSFMT_MEXP", DSFMT_MEXP);
 }
 
 NODE_MODULE(dsfmt_js_nv, init)

@@ -28,4 +28,15 @@ inline void set_method( Isolate* isolate,
   recv->Set(fn_name, fn);
 }
 
+
+template <typename TypeName>
+inline void set_attribute(TypeName& obj, char* name, long number) {
+  Isolate *iso = Isolate::GetCurrent();
+  HandleScope scope(iso);
+  obj->Set(
+    String::NewFromUtf8(iso, name),
+    Number::New(iso, number) );
+}
+
+
 #endif // MAIN_H_INC
