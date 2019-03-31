@@ -15,7 +15,6 @@ need nodejs version >= 6
 
 `npm install dsfmt-js-lib --save`
 
-没有加入公共 npm 库, 如需要自行解决.
 
 
 # usage
